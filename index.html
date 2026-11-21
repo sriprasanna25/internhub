@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InternHub</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top"><h1>InternHub</h1><p>Find an internship and apply securely.</p></header>
+
+  <main>
+    <section aria-labelledby="list-h">
+      <h2 id="list-h">Open internships</h2>
+      <label class="search">Search
+        <input id="search" type="search" maxlength="50" placeholder="Title, company, or location">
+      </label>
+      <div id="status" role="status" aria-live="polite"></div>
+      <ul id="list" class="cards"></ul>
+    </section>
+
+    <section id="apply-section" aria-labelledby="apply-h" hidden>
+      <h2 id="apply-h">Apply: <span id="apply-title"></span></h2>
+      <form id="apply-form" novalidate>
+        <label>Full name <input name="name" autocomplete="name" maxlength="80" required></label>
+        <p class="err" data-for="name"></p>
+
+        <label>Email <input name="email" type="email" autocomplete="email" maxlength="120" required></label>
+        <p class="err" data-for="email"></p>
+
+        <label>Phone (optional) <input name="phone" type="tel" autocomplete="tel" maxlength="20"></label>
+        <p class="err" data-for="phone"></p>
+
+        <label>Resume link, https only (optional) <input name="resumeUrl" type="url" maxlength="300"></label>
+        <p class="err" data-for="resumeUrl"></p>
+
+        <label>Cover letter <textarea name="coverLetter" rows="5" maxlength="1000" required></textarea></label>
+        <p class="err" data-for="coverLetter"></p>
+
+        <p class="err" id="form-error" role="alert"></p>
+        <p class="ok" id="form-ok" role="status"></p>
+        <button id="submit" type="submit">Submit application</button>
+        <button id="cancel" type="button" class="ghost">Cancel</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
