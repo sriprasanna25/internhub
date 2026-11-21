@@ -1,0 +1,11 @@
+{
+  "name": "internhub",
+  "version": "1.0.0",
+  "description": "Full-stack internship board with a secure application form (zero dependencies, Node 22+)",
+  "type": "module",
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "test": "node --no-warnings --test test/*.test.js"
+  },
+  "engines": { "node": ">=22.13" }
+}
